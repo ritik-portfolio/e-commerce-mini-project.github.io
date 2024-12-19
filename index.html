@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SHOP LUXURY</h1>
+        <nav>
+            <a href="index.html" onclick="showSection('hero')">Home</a>
+            <a href="#products" onclick="showSection('products')">Products</a>
+            <a href="#cart" onclick="showSection('cart')">Cart (<span id="cartCount">0</span>)</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for products..." oninput="filterProducts()" />
+            <button onclick="performSearch()">Search</button>
+        </div>
+    </header> 
+
+    <section id="hero" class="hero">
+        <h2>WELCOME TO SHOP LUXURY</h2>
+        <p>Your one-stop shop for the best deals and Quality online</p>
+        <button>Shop Now</button>
+    </section>
+
+    <section id="products" class="products">
+        
+        <div class="product">
+            <img src="../project/assets/pen111.png" alt="Product 1" height="200">
+            <h3>Pilot V7 Black Pen</h3>
+            <p>₹599.00</p>
+            <button onclick="addToCart('Pilot V7 Black Pen', 599.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="../project/assets/9000016330_000.png" alt="Product 2" height="200">
+            <h3>Parker</h3>
+            <h4 style="font-family: cursive;">Silver Ball Pen</h4>
+            <p>₹553.00</p>
+            <button onclick="addToCart('Parker Silver Ball Pen', 553.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="../project/assets/40324885_1-paperkraft-a5-designer-wiro-hard-bound-notebook-paper-dangler-70-gsm-underwater-star.webp" alt="Product 3">
+            <h3>Paperkraft</h3>
+            <h4 style="font-family: cursive;">A5 Designer Wiro Hard Bound Notebook</h4>
+            <p>₹340.00</p>
+            <button onclick="addToCart('Product 3', 340.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="../project/assets/Glosen-Pen-Stand-C-2031-M.png" alt="Product 4">
+            <h3>Wooden penstand – Large</h3>
+            <p>₹1,399.00</p>
+            <button onclick="addToCart('Product 4', 1399.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="../project/assets/pen111.png" alt="Product 1" height="200">
+            <h3>Pilot V7 Black Pen</h3>
+            <p>₹599.00</p>
+            <button onclick="addToCart('Pilot V7 Black Pen', 599.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="../project/assets/9000016330_000.png" alt="Product 2" height="200">
+            <h3>Parker</h3>
+            <h4 style="font-family: cursive;">Silver Ball Pen</h4>
+            <p>₹553.00</p>
+            <button onclick="addToCart('Parker Silver Ball Pen', 553.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="../project/assets/40324885_1-paperkraft-a5-designer-wiro-hard-bound-notebook-paper-dangler-70-gsm-underwater-star.webp" alt="Product 3">
+            <h3>Paperkraft</h3>
+            <h4 style="font-family: cursive;">A5 Designer Wiro Hard Bound Notebook</h4>
+            <p>₹340.00</p>
+            <button onclick="addToCart('Product 3', 340.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="../project/assets/Glosen-Pen-Stand-C-2031-M.png" alt="Product 4">
+            <h3>Wooden penstand – Large</h3>
+            <p>₹1,399.00</p>
+            <button onclick="addToCart('Product 4', 1399.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="../project/assets/pen111.png" alt="Product 1" height="200">
+            <h3>Pilot V7 Black Pen</h3>
+            <p>₹599.00</p>
+            <button onclick="addToCart('Pilot V7 Black Pen', 599.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="../project/assets/9000016330_000.png" alt="Product 2" height="200">
+            <h3>Parker</h3>
+            <h4 style="font-family: cursive;">Silver Ball Pen</h4>
+            <p>₹553.00</p>
+            <button onclick="addToCart('Parker Silver Ball Pen', 553.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="../project/assets/40324885_1-paperkraft-a5-designer-wiro-hard-bound-notebook-paper-dangler-70-gsm-underwater-star.webp" alt="Product 3">
+            <h3>Paperkraft</h3>
+            <h4 style="font-family: cursive;">A5 Designer Wiro Hard Bound Notebook</h4>
+            <p>₹340.00</p>
+            <button onclick="addToCart('Product 3', 340.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="../project/assets/Glosen-Pen-Stand-C-2031-M.png" alt="Product 4">
+            <h3>Wooden penstand – Large</h3>
+            <p>₹1,399.00</p>
+            <button onclick="addToCart('Product 4', 1399.00)">Add to Cart</button>
+        </div>
+    </section>
+
+    <section id="cart" class="cart-page" style="display: none;">
+        <h2>Your Cart</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems">
+                <!-- Cart items will be dynamically inserted here -->
+            </tbody>
+        </table>
+        <div style="text-align: right; margin-top: 20px;">
+            <strong>Total: ₹<span id="cartTotal">0.00</span></strong>
+        </div>
+        <button onclick="clearCart()" class="cut-btn">Cut</button>
+        <button>Proceed to Checkout</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ShopEasy. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="#" title="Facebook">&#xf09a;</a>
+            <a href="#" title="Twitter">&#xf099;</a>
+            <a href="#" title="Instagram">&#xf16d;</a>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
