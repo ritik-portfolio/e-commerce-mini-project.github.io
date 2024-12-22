@@ -15,12 +15,13 @@
 <body>
     <header>
         <h1>SHOP LUXURY</h1>
-        <nav>
-            <a href="index.html" onclick="showSection('hero')">Home</a>
-            <a href="#products" onclick="showSection('products')">Products</a>
-            <a href="#cart" onclick="showSection('cart')">Cart (<span id="cartCount">0</span>)</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+<nav>
+    <a href="index.html" onclick="showSection('hero')">Home</a>
+    <a href="javascript:void(0)" onclick="showSection('products')">Products</a>
+    <a href="#" onclick="showSection('cart')">Cart (<span id="cartCount">0</span>)</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
         
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Search for products..." oninput="filterProducts()" />
@@ -37,10 +38,13 @@
     <section id="products" class="products">
         
         <div class="product">
-            <img src="https://www.pilotpen.co.in/images/bg/pen111.png" alt="Product 1" height="200">
+            <a href="product 1.html">
+                <img src="https://www.pilotpen.co.in/images/bg/pen111.png" alt="Product 1">
+            </a>
             <h3>Pilot V7 Black Pen</h3>
             <p>₹599.00</p>
             <button onclick="addToCart('Pilot V7 Black Pen', 599.00)">Add to Cart</button>
+            <button onclick="addToCart('Pilot V7 Black Pen', 599.00)">Buy Now</button>
         </div>
         <div class="product">
             <img src="https://luxor.in/media/catalog/product/cache/1d33a401d7d4f49c41930c20a2e836a7/9/0/9000016330_000.png" alt="Product 2" height="200">
@@ -48,21 +52,85 @@
             <h4 style="font-family: cursive;">Silver Ball Pen</h4>
             <p>₹553.00</p>
             <button onclick="addToCart('Parker Silver Ball Pen', 553.00)">Add to Cart</button>
+            <button onclick="addToCart('Parker Silver Ball Pen', 553.00)">Buy Now</button>
+            
         </div>
         <div class="product">
-            <img src="https://www.bigbasket.com/media/uploads/p/xxl/40324885_1-paperkraft-a5-designer-wiro-hard-bound-notebook-paper-dangler-70-gsm-underwater-star.jpg" alt="Product 3">
+            <img src="https://timeplan.lk/Images/retail/29.png" alt="Product 3">
             <h3>Paperkraft</h3>
             <h4 style="font-family: cursive;">A5 Designer Wiro Hard Bound Notebook</h4>
             <p>₹340.00</p>
-            <button onclick="addToCart('Product 3', 340.00)">Add to Cart</button>
+            <button onclick="addToCart('Paperkraft Notebook', 340.00)">Add to Cart</button>
+            <button onclick="addToCart('Paperkraft Notebook', 340.00)">Buy Now</button>
         </div>
         <div class="product">
             <img src="https://oddpod.in/wp-content/uploads/2020/10/Glosen-Pen-Stand-C-2031-M.png" alt="Product 4">
             <h3>Wooden penstand – Large</h3>
             <p>₹1,399.00</p>
-            <button onclick="addToCart('Product 4', 1399.00)">Add to Cart</button>
+            <button onclick="addToCart('Wooden penstand - Large', 1399.00)">Add to Cart</button>
+            <button onclick="addToCart('Wooden penstand - Large', 1399.00)">Buy Now</button>
+            
         </div>
-        
+        <div class="product">
+            <img src="https://www.pilotpen.co.in/images/bg/pen111.png" alt="Product 1" height="200">
+            <h3>Pilot V7 Black Pen</h3>
+            <p>₹599.00</p>
+            <button onclick="addToCart('Pilot V7 Black Pen', 599.00)">Add to Cart</button>
+            <button onclick="addToCart('Pilot V7 Black Pen', 599.00)">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="https://luxor.in/media/catalog/product/cache/1d33a401d7d4f49c41930c20a2e836a7/9/0/9000016330_000.png" alt="Product 2" height="200">
+            <h3>Parker</h3>
+            <h4 style="font-family: cursive;">Silver Ball Pen</h4>
+            <p>₹553.00</p>
+            <button onclick="addToCart('Parker Silver Ball Pen', 553.00)">Add to Cart</button>
+            <button onclick="addToCart('Parker Silver Ball Pen', 553.00)">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="https://timeplan.lk/Images/retail/29.png" alt="Product 3">
+            <h3>Paperkraft</h3>
+            <h4 style="font-family: cursive;">A5 Designer Wiro Hard Bound Notebook</h4>
+            <p>₹340.00</p>
+            <button onclick="addToCart('Paperkraft', 340.00)">Add to Cart</button>
+            <button onclick="addToCart('Paperkraft', 340.00)">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="https://oddpod.in/wp-content/uploads/2020/10/Glosen-Pen-Stand-C-2031-M.png" alt="Product 4">
+            <h3>Wooden penstand – Large</h3>
+            <p>₹1,399.00</p>
+            <button onclick="addToCart('Wooden penstand - Large', 1399.00)">Add to Cart</button>
+            <button onclick="addToCart('Wooden penstand - Large', 1399.00)">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="https://www.pilotpen.co.in/images/bg/pen111.png" alt="Product 5" height="200">
+            <h3>Pilot V7 Black Pen</h3>
+            <p>₹599.00</p>
+            <button onclick="addToCart('Pilot V7 Black Pen', 599.00)">Add to Cart</button>
+            <button onclick="addToCart('Pilot V7 Black Pen', 599.00)">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="https://luxor.in/media/catalog/product/cache/1d33a401d7d4f49c41930c20a2e836a7/9/0/9000016330_000.png" alt="Product 6" height="200">
+            <h3>Parker</h3>
+            <h4 style="font-family: cursive;">Silver Ball Pen</h4>
+            <p>₹553.00</p>
+            <button onclick="addToCart('Parker Silver Ball Pen', 553.00)">Add to Cart</button>
+            <button onclick="addToCart('Parker Silver Ball Pen', 553.00)">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="https://timeplan.lk/Images/retail/29.png" alt="Product 7">
+            <h3>Paperkraft</h3>
+            <h4 style="font-family: cursive;">A5 Designer Wiro Hard Bound Notebook</h4>
+            <p>₹340.00</p>
+            <button onclick="addToCart('Product 7', 340.00)">Add to Cart</button>
+            <button onclick="addToCart('Product 7', 340.00)">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="https://oddpod.in/wp-content/uploads/2020/10/Glosen-Pen-Stand-C-2031-M.png" alt="Product 8">
+            <h3>Wooden penstand – Large</h3>
+            <p>₹1,399.00</p>
+            <button onclick="addToCart('Product 8', 1399.00)">Add to Cart</button>
+            <button onclick="addToCart('Product 8', 1399.00)">Buy Now</button>
+        </div>
     </section>
 
     <section id="cart" class="cart-page" style="display: none;">
@@ -84,7 +152,7 @@
         <div style="text-align: right; margin-top: 20px;">
             <strong>Total: ₹<span id="cartTotal">0.00</span></strong>
         </div>
-        <button onclick="clearCart()" class="cut-btn">Cut</button>
+        <button onclick="clearCart()" class="cut-btn">Remove all products</button>
         <button>Proceed to Checkout</button>
     </section>
 
